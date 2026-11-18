@@ -1,1 +1,197 @@
+/* Variáveis globais de cores */
+:root {
+    --cor-primaria: #065F46;
+    --cor-destaque: #10B981;
+    --cor-ativo-fundo: #dbeafe;
+    --cor-fundo: #f1f5f9;
+    --cor-superficie: #ffffff;
+    --cor-texto: #334155;
+    --cor-texto-suave: #64748b;
+    --cor-borda: #cbd5e1;
+}
 
+/* Reset global de Box Model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Tipografia herdada e Layout Macro com CSS Grid */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "nav    main";
+}
+
+/* Oculta o divisor hr exclusivamente via CSS */
+hr {
+    display: none;
+}
+
+/* Cabeçalho superior */
+header {
+    grid-area: header;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 1.75rem 2rem;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+header h1 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.65rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* Barra lateral de navegação */
+nav {
+    grid-area: nav;
+    background-color: var(--cor-superficie);
+    border-right: 1px solid var(--cor-borda);
+    padding: 1.5rem 1.25rem;
+}
+
+/* Remoção dos marcadores apenas na lista raiz da navegação */
+.menu-principal {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.menu-principal > li {
+    margin-bottom: 0.4rem;
+}
+
+/* Destaque do item ativo (Início) */
+.ativo {
+    display: block;
+    background-color: var(--cor-ativo-fundo);
+    color: var(--cor-primaria);
+    border-left: 4px solid var(--cor-destaque);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0 6px 6px 0;
+    font-weight: 600;
+}
+
+/* Links dentro da nav e efeito :hover */
+nav a {
+    display: block;
+    color: var(--cor-texto);
+    text-decoration: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+nav a:hover {
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+}
+
+/* Títulos das seções internas do menu */
+.secao-nav {
+    margin-top: 1.5rem;
+}
+
+.titulo-secao {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--cor-texto-suave);
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.65rem;
+}
+
+/* Hierarquia das listas aninhadas (Registros e Módulos/Labs) */
+.lista-registros {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-registros li {
+    margin-bottom: 0.25rem;
+}
+
+.lista-modulos {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.lista-modulos > li {
+    margin-bottom: 1rem;
+    font-size: 0.92rem;
+    color: #0f172a;
+}
+
+.lista-labs {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin-top: 0.4rem;
+}
+
+.lista-labs li {
+    margin-bottom: 0.25rem;
+}
+
+.lista-labs a {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Conteúdo principal à direita */
+main {
+    grid-area: main;
+    padding: 2rem 2.5rem;
+}
+
+main h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.45rem;
+    color: var(--cor-primaria);
+}
+
+main p {
+    max-width: 65ch;
+    margin-top: 0;
+}
+
+/* Responsividade (Mobile) */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main";
+    }
+
+    nav {
+        border-right: none;
+        border-bottom: 1px solid var(--cor-borda);
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+}
