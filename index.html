@@ -4,54 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio de Programação Web</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <h1>Meu Portfólio de Programação Web</h1>
-    <p>Repositório de atividades práticas e documentação da disciplina.</p>
+    <header>
+        <h1>Meu Portfólio de Programação Web</h1>
+        <p>Repositório de atividades práticas e documentação da disciplina.</p>
+    </header>
 
-    <h2>Menu Principal</h2>
+    <nav aria-label="Menu Principal">
+        <ul class="menu-principal">
+            <li><strong class="ativo">Início</strong></li>
+            <li><a href="referencias.html">Material de Referência HTML</a></li>
+            
+            <li class="secao-nav">
+                <span class="titulo-secao">Registros de Sala de Aula (Markdown)</span>
+                <ul class="lista-registros">
+                    <li><a href="docs/md-semana01.html">Registro da Prática 01</a></li>
+                    <li><a href="docs/comandos-git.html">Guia de Comandos Git</a></li>
+                </ul>
+            </li>
 
-    <ul>
-        <li>Início (Você está aqui)</li>
-        <li><a href="referencias.html">Material de Referência HTML</a></li>
-        <li>Registros de Sala de Aula (Markdown):
-            <ul>
-                <li><a href="docs/md-semana01.html">Registro da Prática 01</a></li>
-                <li><a href="docs/comandos-git.html">Guia de Comandos Git</a></li>
-            </ul>
-        </li>
-        <li>Trilhas de Laboratório:
-            <ol>
-                <li><strong>Módulo 1: Estrutura (HTML)</strong>
-                    <ul>
-                        <li><a href="Lab/01/index.html">Lab 01 - Hello World e Tags Básicas</a></li>
-                        <li><a href="Lab/02/index.html">Lab 02 - Listas Ordenadas e Não Ordenadas</a></li>
-                        <li><a href="Lab/03/index.html">Lab 03 - Estruturação de Tabelas</a></li>
-                    </ul>
-                </li>
-                <li><strong>Módulo 2: Estilização (CSS)</strong>
-                    <ul>
-                        <li><a href="Lab/04/index.html">Lab 04 - Introdução ao CSS</a></li>
-                        <li><a href="Lab/05/index.html">Lab 05 - Seletores e Propriedades</a></li>
-                        <li><a href="Lab/06/index.html">Lab 06 - Layouts Responsivos</a></li>
-                    </ul>
-                </li>
-                <li><strong>Módulo 3: Interatividade (JavaScript)</strong>
-                    <ul>
-                        <li><a href="Lab/07/index.html">Lab 07 - Manipulação do DOM</a></li>
-                        <li><a href="Lab/08/index.html">Lab 08 - Eventos e Funções</a></li>
-                        <li><a href="Lab/09/index.html">Lab 09 - Validação de Formulários</a></li>
-                    </ul>
-                </li>
-            </ol>
-        </li>
-    </ul>
+            <li class="secao-nav">
+                <span class="titulo-secao">Trilhas de Laboratório</span>
+                <ol class="lista-modulos">
+                    <li><strong>Módulo 1: Estrutura (HTML)</strong>
+                        <ul class="lista-labs">
+                            <li><a href="Lab/01/index.html">Lab 01 - Hello World e Tags Básicas</a></li>
+                            <li><a href="Lab/02/index.html">Lab 02 - Listas Ordenadas e Não Ordenadas</a></li>
+                            <li><a href="Lab/03/index.html">Lab 03 - Estruturação de Tabelas</a></li>
+                        </ul>
+                    </li>
+                    <li><strong>Módulo 2: Estilização (CSS)</strong>
+                        <ul class="lista-labs">
+                            <li><a href="Lab/04/index.html">Lab 04 - Introdução ao CSS</a></li>
+                            <li><a href="Lab/05/index.html">Lab 05 - Seletores e Propriedades</a></li>
+                            <li><a href="Lab/06/index.html">Lab 06 - Layouts Responsivos</a></li>
+                        </ul>
+                    </li>
+                    <li><strong>Módulo 3: Interatividade (JavaScript)</strong>
+                        <ul class="lista-labs">
+                            <li><a href="Lab/07/index.html">Lab 07 - Manipulação do DOM</a></li>
+                            <li><a href="Lab/08/index.html">Lab 08 - Eventos e Funções</a></li>
+                            <li><a href="Lab/09/index.html">Lab 09 - Validação de Formulários</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </nav>
 
     <hr>
 
-    <h2>Status do Projeto</h2>
-    <p>Este site consolida tanto as implementações práticas (HTML) quanto a documentação técnica (Markdown) elaborada durante as aulas.</p>
+    <main>
+        <h2>Status do Projeto</h2>
+        <p>Este site consolida tanto as implementações práticas (HTML) quanto a documentação técnica (Markdown) elaborada durante as aulas. Utilize o menu lateral para navegar entre os registros de sala de aula, os laboratórios organizados por módulo e o material de referência.</p>
+    </main>
 
 </body>
 </html>
