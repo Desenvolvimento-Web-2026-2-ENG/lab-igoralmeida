@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Lista de Compras</h1>
+      <p class="subtitulo">Orçamento disponível: <strong>R$ 100,00</strong></p>
+    </header>
+
+    <section class="formulario" aria-label="Adicionar item">
+      <input
+        type="text"
+        id="nome"
+        aria-label="Nome do item"
+        placeholder="Nome do item (ex: Arroz)"
+        autocomplete="off"
+      >
+      <input
+        type="number"
+        id="preco"
+        aria-label="Preço unitário"
+        placeholder="Preço (ex: 25.50)"
+        step="0.01"
+        min="0.01"
+      >
+      <input
+        type="number"
+        id="quantidade"
+        aria-label="Quantidade"
+        placeholder="Qtd"
+        value="1"
+        min="1"
+        step="1"
+      >
+      <button type="button" id="btn-adicionar">Adicionar</button>
+    </section>
+
+    <p id="mensagem" class="mensagem" aria-live="polite"></p>
+
+    <section class="resumo" aria-label="Resumo da compra">
+      <div>Itens: <strong id="qtd-itens">0</strong></div>
+      <div>Total: <strong id="total">R$ 0.00</strong></div>
+      <div>Saldo: <strong id="saldo">R$ 100.00</strong></div>
+    </section>
+
+    <p id="desconto" class="desconto" aria-live="polite"></p>
+
+    <p id="status-orcamento" class="status">Dentro do orçamento</p>
+
+    <ul id="lista" class="lista"></ul>
+
+    <div class="acoes">
+      <button type="button" id="btn-desfazer" class="btn-secundario">Desfazer último</button>
+      <button type="button" id="btn-limpar" class="btn-secundario">Limpar tudo</button>
+    </div>
+  </main>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
